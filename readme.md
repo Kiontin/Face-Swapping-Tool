@@ -28,7 +28,7 @@ Filtre AR en temps réel (webcam) : il applique
 
 ### 1) Cloner
 ```bash
-git clone https://github.com/<TON_USER>/<TON_REPO>.git
+git clone https://github.com/variedlark/Face-Swapping-Tool.git
 cd <TON_REPO>
 ```
 
@@ -63,7 +63,7 @@ Place ton PNG RGBA ici :
 
     assets/mask.png
 
-Ton `mask.png` doit être un **masque stylisé** (non‑identitaire) en **RGBA**.
+Ton `mask.png` doit être en **RGBA**.
 
 ### 2) Générer la perruque (cheveux) depuis le masque
 
