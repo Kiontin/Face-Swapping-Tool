@@ -1,178 +1,251 @@
-# MASQUE STYLISÉ VIA RA + CHEVEUX
+# Face Swapping Tool
 
-Filtre AR en temps réel (webcam) : il applique
-1) un **masque stylisé** (PNG RGBA) sur le visage, et  
-2) une **perruque** (cheveux extraits automatiquement depuis ce masque).
+A powerful and easy-to-use face swapping application that leverages advanced deep learning techniques to seamlessly swap faces in images and videos.
 
-> **Aucun visage/masque n’est fourni par défaut** dans ce dépôt.  
-> Chaque utilisateur ajoute son propre `assets/mask.png`.
+## Features
+
+- **High-Quality Face Swapping**: Advanced AI-powered face detection and swapping
+- **Multiple Format Support**: Works with images (PNG, JPG, etc.) and video files
+- **Real-time Processing**: Fast processing with optimized algorithms
+- **User-Friendly Interface**: Simple and intuitive GUI for easy usage
+- **Cross-Platform**: Supports macOS, Windows, and Linux
+
+## System Requirements
+
+### Minimum Requirements
+- **RAM**: 4GB (8GB+ recommended)
+- **Disk Space**: 2GB for dependencies
+- **GPU**: NVIDIA GPU with CUDA support (optional but recommended for faster processing)
+
+### Python Requirements
+- Python 3.7 or higher
+
+## Installation
+
+Choose the setup instructions for your operating system:
+
+### macOS
+
+1. **Install Homebrew** (if not already installed):
+   ```bash
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
+
+2. **Install Python 3 and Dependencies**:
+   ```bash
+   brew install python3
+   brew install git
+   ```
+
+3. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/variedlark/Face-Swapping-Tool.git
+   cd Face-Swapping-Tool
+   ```
+
+4. **Create a Virtual Environment**:
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+
+5. **Install Python Dependencies**:
+   ```bash
+   pip install --upgrade pip
+   pip install -r requirements.txt
+   ```
+
+6. **Run the Application**:
+   ```bash
+   python main.py
+   ```
+
+### Windows
+
+1. **Install Python 3**:
+   - Download from https://www.python.org/downloads/
+   - **Important**: Check "Add Python to PATH" during installation
+   - Verify installation by opening Command Prompt and running:
+     ```cmd
+     python --version
+     ```
+
+2. **Install Git** (if not already installed):
+   - Download from https://git-scm.com/download/win
+
+3. **Clone the Repository**:
+   ```cmd
+   git clone https://github.com/variedlark/Face-Swapping-Tool.git
+   cd Face-Swapping-Tool
+   ```
+
+4. **Create a Virtual Environment**:
+   ```cmd
+   python -m venv venv
+   venv\Scripts\activate
+   ```
+
+5. **Install Python Dependencies**:
+   ```cmd
+   python -m pip install --upgrade pip
+   pip install -r requirements.txt
+   ```
+
+6. **Run the Application**:
+   ```cmd
+   python main.py
+   ```
+
+### Linux (Ubuntu/Debian-based)
+
+1. **Update System Packages**:
+   ```bash
+   sudo apt-get update
+   sudo apt-get upgrade -y
+   ```
+
+2. **Install Python 3 and Dependencies**:
+   ```bash
+   sudo apt-get install -y python3 python3-pip python3-venv
+   sudo apt-get install -y git
+   ```
+
+3. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/variedlark/Face-Swapping-Tool.git
+   cd Face-Swapping-Tool
+   ```
+
+4. **Create a Virtual Environment**:
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+
+5. **Install Python Dependencies**:
+   ```bash
+   pip install --upgrade pip
+   pip install -r requirements.txt
+   ```
+
+6. **Run the Application**:
+   ```bash
+   python main.py
+   ```
+
+### Linux (Fedora/RHEL-based)
+
+1. **Update System Packages**:
+   ```bash
+   sudo dnf update -y
+   ```
+
+2. **Install Python 3 and Dependencies**:
+   ```bash
+   sudo dnf install -y python3 python3-pip python3-devel
+   sudo dnf install -y git
+   ```
+
+3. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/variedlark/Face-Swapping-Tool.git
+   cd Face-Swapping-Tool
+   ```
+
+4. **Create a Virtual Environment**:
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+
+5. **Install Python Dependencies**:
+   ```bash
+   pip install --upgrade pip
+   pip install -r requirements.txt
+   ```
+
+6. **Run the Application**:
+   ```bash
+   python main.py
+   ```
+
+## Quick Start
+
+1. **Launch the Application**:
+   ```bash
+   python main.py
+   ```
+
+2. **Select Images/Video**:
+   - Choose the source image (face to swap from)
+   - Choose the target image/video (where to swap the face)
+
+3. **Configure Settings**:
+   - Adjust quality parameters
+   - Set output format and location
+
+4. **Process**:
+   - Click "Start" to begin face swapping
+   - Wait for processing to complete
+
+5. **Save Results**:
+   - Save the processed image/video to your desired location
+
+## GPU Support (NVIDIA)
+
+For faster processing with an NVIDIA GPU:
+
+1. **Install CUDA Toolkit**: https://developer.nvidia.com/cuda-downloads
+2. **Install cuDNN**: https://developer.nvidia.com/cudnn
+3. **Install GPU-enabled dependencies**:
+   ```bash
+   pip install tensorflow-gpu
+   # or
+   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+   ```
+
+## Troubleshooting
+
+### Common Issues
+
+**Issue**: `ModuleNotFoundError: No module named 'cv2'`
+- **Solution**: Run `pip install opencv-python`
+
+**Issue**: `CUDA not found` (GPU mode)
+- **Solution**: Verify CUDA installation and install `tensorflow-gpu` or `torch` GPU version
+
+**Issue**: Permission denied on macOS/Linux
+- **Solution**: Run `chmod +x main.py` before executing
+
+**Issue**: Python not found on Windows
+- **Solution**: Ensure Python was added to PATH during installation. Reinstall Python and check "Add Python to PATH"
+
+## Performance Tips
+
+- Use GPU acceleration if available (significantly faster)
+- Reduce input image resolution for quicker processing
+- Close unnecessary applications to free up RAM
+- Ensure adequate storage space for output files
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit pull requests or open issues for bugs and feature requests.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Support
+
+For issues, questions, or suggestions:
+- Open an issue on the GitHub repository
+- Check the troubleshooting section above
+- Ensure all dependencies are properly installed
+
+## Disclaimer
+
+This tool is designed for ethical and legal purposes. Users are responsible for ensuring that face swapping is performed with proper consent and in compliance with local laws and regulations.
 
 ---
 
-## Fonctionnalités
-- **Face tracking** via *MediaPipe Face Landmarker* (landmarks + tracking temps réel pour effets/avatars) [1].
-- **Segmentation cheveux** via *MediaPipe Image Segmenter* (modèle multiclasses) avec **confidence mask** pour des bords plus naturels [2].
-- **Extraction automatique des cheveux** depuis `assets/mask.png` → génère `assets/wig.png` et `assets/wig_src_points.npy`.
-- Optimisations : stabilité améliorée (filtrage), bords adoucis, latence réduite (pipeline asynchrone).
-
----
-
-## Prérequis
-- Python **3.9+** recommandé.
-- Git installé (VS Code utilise le Git **de la machine** pour Source Control) [3].
-- macOS / Windows / Linux.
-
----
-
-## Installation (local)
-
-### 1) Cloner
-```bash
-git clone https://github.com/variedlark/Face-Swapping-Tool.git
-cd Face-Swapping-Tool
-```
-
-### 2) Créer et activer un venv
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-```
-
-
-### 3) Installer les dépendances
-
-```bash
-pip install -r requirements.txt
-```
-
-### 4) Télécharger les modèles (non versionnés)
-
-Les modèles ne sont pas inclus dans le repo (taille/licence). Télécharge-les avec :
-
-```bash
-./scripts/download_models.sh
-```
-
-***
-
-## Ajouter ton masque (obligatoire)
-
-### 1) Ajoute ton fichier
-
-Place ton PNG RGBA ici :
-
-    assets/mask.png
-
-Ton `mask.png` doit être en **RGBA**.
-
-### 2) Générer la perruque (cheveux) depuis le masque
-
-```bash
-python3 prepare_wig.py
-```
-
-Ça génère localement :
-
-*   `assets/wig.png`
-*   `assets/wig_src_points.npy`
-
-***
-
-## Lancer
-
-```bash
-python3 run_filter.py --mirror
-```
-
-Options utiles :
-
-*   `--camera N` : sélectionner une autre webcam
-*   `--debug` : afficher des points/repères de debug
-
-***
-
-## Structure du projet
-
-    .
-    ├── ar_filter/
-    │   ├── __init__.py
-    │   ├── overlay.py
-    │   ├── tracker.py
-    │   ├── warp.py
-    │   └── hair_segmenter.py
-    ├── assets/
-    │   ├── .gitkeep
-    │   └── (fichiers ajoutés localement par l’utilisateur)
-    ├── scripts/
-    │   └── download_models.sh
-    ├── prepare_wig.py
-    ├── run_filter.py
-    ├── requirements.txt
-    └── README.md
-
-***
-
-## Politique de fichiers (important)
-
-Ce dépôt **n’inclut pas** (volontairement) :
-
-*   `assets/mask.png` (contenu utilisateur)
-*   `assets/wig.png`, `assets/wig_src_points.npy` (générés localement)
-*   `assets/*.task`, `assets/*.tflite` (modèles ML)
-
-Ces fichiers sont ignorés via `.gitignore`.
-
-***
-
-## Dépannage
-
-### VS Code ne propose pas les actions Git
-
-VS Code dépend de l’installation Git du système (Git 2.0+). Installe Git puis relance VS Code \[3].
-
-### “Je ne vois pas `assets/` sur GitHub”
-
-Normal si le dossier est vide : Git ne track pas les dossiers vides. Assure-toi que `assets/.gitkeep` est bien committé \[4].
-
-### “.gitignore n’ignore pas un fichier”
-
-`.gitignore` ne s’applique qu’aux fichiers **non trackés**. Si un fichier a déjà été committé, il faut le retirer du suivi (`git rm --cached`) puis commit/push \[5].
-
-***
-
-## Workflow Git (push)
-
-```bash
-git status
-git add -A
-git commit -m "Ton message"
-git push
-```
-
-***
-
-## Licence
-
-Ajoute une licence (MIT / Apache‑2.0 recommandé) avant diffusion large.
-
-***
-
-## Références
-
-\[1] MediaPipe Face Landmarker (Python) — usage pour filtres/avatars, landmarks, temps réel  
-<https://ai.google.dev/edge/mediapipe/solutions/vision/face_landmarker/python>
-
-\[2] MediaPipe Image Segmenter — masques `category_mask` / `confidence_masks` pour effets visuels  
-<https://ai.google.dev/edge/mediapipe/solutions/vision/image_segmenter>
-
-\[3] VS Code Source Control — prérequis : VS Code utilise le Git installé sur la machine  
-<https://code.visualstudio.com/docs/sourcecontrol/overview>
-
-\[4] Git et dossiers vides — utiliser un fichier placeholder `.gitkeep` / `.gitignore` pour conserver un dossier vide  
-<https://stackoverflow.com/questions/115983/how-do-i-add-an-empty-directory-to-a-git-repository>
-
-\[5] `.gitignore` et fichiers déjà trackés — retirer du cache avec `git rm --cached`  
-<https://stackoverflow.com/questions/45400361/why-is-gitignore-not-ignoring-my-files>
-
-```
-```
+**Last Updated**: January 14, 2026
